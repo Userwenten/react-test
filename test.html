@@ -1,0 +1,72 @@
+
+<!-- import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import "antd/dist/antd.css";
+import "./index.css";
+import { Checkbox, Divider } from "antd";
+
+const CheckboxGroup = Checkbox.Group;
+
+const pictures = [
+  {
+    id: "1",
+    name: "foo",
+    url:
+      "https://gw.alipayobjects.com/mdn/rms_d212b7/afts/img/A*LlfeSa8N0WgAAAAAAAAAAABkARQnAQ"
+  },
+  {
+    id: "2",
+    name: "foo",
+    url:
+      "https://gw.alipayobjects.com/mdn/rms_d212b7/afts/img/A*LlfeSa8N0WgAAAAAAAAAAABkARQnAQ"
+  },
+  {
+    id: "3",
+    name: "foo",
+    url:
+      "https://gw.alipayobjects.com/mdn/rms_d212b7/afts/img/A*LlfeSa8N0WgAAAAAAAAAAABkARQnAQ"
+  }
+];
+const plainOptions = pictures.map((item) => {
+  return item.id;
+});
+
+const defaultCheckedList = [""];
+const App = () => {
+  const [checkedList, setCheckedList] = React.useState(defaultCheckedList);
+  const [indeterminate, setIndeterminate] = React.useState(true);
+  const [checkAll, setCheckAll] = React.useState(false);
+
+  const onChange = (list) => {
+    setCheckedList(list);
+    setIndeterminate(!!list.length && list.length < plainOptions.length);
+    setCheckAll(list.length === plainOptions.length);
+  };
+
+  const onCheckAllChange = (e) => {
+    setCheckedList(e.target.checked ? plainOptions : []);
+    setIndeterminate(false);
+    setCheckAll(e.target.checked);
+  };
+  useEffect(() => {}, []);
+  return (
+    <>
+      <Checkbox
+        indeterminate={indeterminate}
+        onChange={onCheckAllChange}
+        checked={checkAll}
+      >
+        Check all
+      </Checkbox>
+      <Divider />
+      <CheckboxGroup
+        options={plainOptions}
+        value={checkedList}
+        onChange={onChange}
+      />
+
+    </>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById("container")); -->
